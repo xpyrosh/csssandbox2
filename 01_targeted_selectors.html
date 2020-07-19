@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Selectors</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: .5rem;
+        }
+
+        /* Direct Child, no subchild (ie. in a UL) */
+        div > p {
+            background: #ddd;
+        }
+
+        /* Directly After, sibiling not child */
+        div + p {
+            background: #333;
+            color: #fff;
+        }
+
+        /* By Attribute */
+        a[target]{
+            /* Specific target a[target='_blank'] */
+            background: #ff0000;
+            color: #fff;
+        }
+
+        /* Specific Attribute Values */
+        input[type='text'],
+        input[type='email'] {
+            width: 100%;
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <ul>
+            <li>Item 1</li>
+            <li><p>Item 2</p></li>
+            <li>Item 3</li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <a href="#">Page One</a> 
+    <a href="#" target="_self">Page Two</a>
+    <a href="http://www.google.ca" target="_blank">Google</a>
+
+    <br><br>
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
