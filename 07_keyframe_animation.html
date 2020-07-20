@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe Animation</title>
+    <style>
+        body{
+            background: #333;
+        }
+
+        .box {
+            background: white;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            /* name of animation */
+            /* animation-name: animate1; */
+
+            /* how long it will take  */
+            /* animation-duration: 5s; */
+
+            /* how many time it repeats, can do infinite */
+            /* animation-iteration-count: 1; */
+
+            /* can make it stay into the animated transformation or revert */
+            /* animation-fill-mode: forwards; */
+
+            /* animation delay */
+            /* animation-delay: 1s; */
+
+            /* control the animation direction */
+            /* animation-direction: alternate; */
+
+            /* control the motion */
+            /* animation-timing-function: ease-in-out; */
+
+            /* do it all together */
+            animation: animate1 5s forwards 1s ease-in-out;
+        }
+
+        @keyframes animate1 {
+            from {
+                width: 200px;
+                top: 0;
+            }
+
+            to {
+                width: 600px;
+                background-color: red;
+                top: 300px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>
